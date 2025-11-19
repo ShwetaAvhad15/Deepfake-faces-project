@@ -1,0 +1,124 @@
+{% extends "layout1.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css">
+    <style>
+        body {
+            background-image: url('static/images/img4.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .form-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .w3-input {
+            border-radius: 4px;
+        }
+        .login-btn {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-title"><b>SignIn</b></div>
+
+    <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+        <label class="w3-text-teal"><b>Username</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}" required>
+        <br>
+
+        <label class="w3-text-teal"><b>Password</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="password" name='password' value="{{ password }}" required>
+        <br>
+
+        <button class="login-btn" name="login" type="submit">Login</button>
+    </form>
+    <div class="footer">
+        <p>Don't have an account? <a href="input">Sign up</a></p>
+    </div>
+</div>
+
+{% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+    
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+
+</body>
+</html>
+<!--<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Login</h1>
+    </header>
+    <br>
+    <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+        <label class="w3-text-teal"><b>Username</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}">
+        <br>
+
+        <label class="w3-text-teal"><b>Password</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="password" name='password' value="{{ password }}">
+        <br>
+
+        <input class="w3-btn w3-blue-grey" name="login" type="submit" value="Login">
+        <br><br>
+    </form>
+
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+    
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>-->
+
+
+
+  {% endblock %}
