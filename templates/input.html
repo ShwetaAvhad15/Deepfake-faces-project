@@ -1,0 +1,221 @@
+{% extends "layout1.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Security System - SignUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css">
+    <style>
+        body {
+            background-image: url('static/images/img1.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .form-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .w3-input {
+            border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-title"><b>User SignUp</b></div>
+    <form class="w3-container" action="" method="post" enctype="multipart/form-data">
+        <label class="w3-text-teal"><b>Enter Your First Name</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}" required>
+        <br>
+
+        <label class="w3-text-teal"><b>Enter Your Email ID</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="email" name='email' value="{{ email }}" required>
+        <br>
+
+        <label class="w3-text-teal"><b>Enter Your Contact No</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="tel" maxlenght="10" name='num' value="{{ num }}" required>
+        <br>
+
+        <label class="w3-text-teal"><b>Age</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="number" name='age' value="{{ age }}" required>
+        <br>
+
+        <label class="w3-text-teal"><b>Gender</b></label>
+        <select class="w3-input w3-border w3-light-grey" name='gender' value="{{ gender }}" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label class="w3-text-teal"><b>Password</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="password" name='password' value="{{ password }}" required>
+        <br>
+
+        <button class="submit-btn" name="sub" type="submit" value="Submit">Submit</button>
+    </form>
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+  </div>
+
+</body>
+</html>
+
+{% endblock %}
+
+
+<!--<div class="w3-card-4 w3-margin">
+    <header class="w3-container w3-blue">
+        <h1>Fill the Details</h1>
+    </header>
+
+    <form class="w3-container w3-margin" action="" method="post" enctype="multipart/form-data">
+        <label class="w3-text-teal"><b>Enter Your First Name</b></label>
+        {{ form.name(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.name.errors %}
+            <ul class="errors">
+                {% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <label class="w3-text-teal"><b>Enter Your Email ID</b></label>
+        {{ form.email(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.email.errors %}
+            <ul class="errors">
+                {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <label class="w3-text-teal"><b>Enter your Contact No</b></label>
+        {{ form.num(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.num.errors %}
+            <ul class="errors">
+                {% for error in form.num.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <label class="w3-text-teal"><b>Age</b></label>
+        {{ form.age(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.age.errors %}
+            <ul class="errors">
+                {% for error in form.age.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <label class="w3-text-teal"><b>Gender</b></label>
+        {{ form.gender(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.gender.errors %}
+            <ul class="errors">
+                {% for error in form.gender.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <label class="w3-text-teal"><b>Password</b></label>
+        {{ form.password(class="w3-input w3-border w3-light-grey",value="") }}
+        {% if form.password.errors %}
+            <ul class="errors">
+                {% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Submit"/>
+        <br><br>
+    </form>
+
+    <br>
+    <footer class="w3-container w3-blue">
+        <h5></h5>
+    </footer>
+</div>
+{% endblock %}-->
+
+
+<!--<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Fill the Details</h1>
+    </header>
+
+
+    <form class="w3-container w3-margin" action="" method="post" enctype="multipart/form-data">
+      <label class="w3-text-teal"><b>Enter Your First Name</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='name' value="{{ name }}">
+      <br>
+
+      <label class="w3-text-teal"><b>Enter Your Email ID</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='email' value="{{ email }}">
+      <br>
+
+      <label class="w3-text-teal"><b>Enter your Contact No</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='num' value="{{ num }}">
+      <br>
+
+      <label class="w3-text-teal"><b>Age</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='age' value="{{ age }}">
+      <br>
+
+      <label class="w3-text-teal"><b>Gender</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" name='gender' value="{{ gender }}">
+      <br>
+  
+      <label class="w3-text-teal"><b>Password</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="password" name='password' value="{{ password }}">
+      <br>
+
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Submit"/>
+        <br><br>
+   
+       
+    </form>
+
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>-->
+    {% endblock %}
