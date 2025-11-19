@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        /* Resetting styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fullscreen background and layout */
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            width: 100%;
+            background-color: #e0e0e0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-nav h3 {
+            margin-left: 20px;
+            color: #0077b6;
+            font-size: 20px;
+        }
+
+        .top-nav a {
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-left: 1px solid #ccc;
+        }
+
+        .top-nav a:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        /* Main content area */
+        .main-content {
+            margin-top: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+
+        /* Content container */
+        .container {
+            margin: 20px 0;
+        }
+
+        .w3-card-4 {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        /* Header & Footer Styling */
+        .w3-blue {
+            background-color: #0077b6;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Architecture Diagram Section */
+        .diagram-section {
+            text-align: center;
+        }
+
+        .diagram-section h2 {
+            font-size: 24px;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        .diagram-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .top-nav a {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            .content {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Menu -->
+    <div class="top-nav">
+        <a href="#">Home Page</a>
+        <a href="input">Sign Up</a>
+        <a href="login">Sign In</a>
+        <a href="logout">Logout</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        
+        <!-- Full-width header image -->
+        <img src="static/images/Img1.png" alt="Car" class="header-img">
+
+        <!-- Content container -->
+        <div class="container">
+            
+            <!-- Introduction Card -->
+            <div class="w3-card-4">
+                <header class="w3-blue">
+                    <h1>Introduction</h1>
+                </header>
+                <div class="content">
+                    <p>
+                      The advent of deepfake technology has transformed the landscape of digital media, enabling the creation of hyper-realistic 
+                      videos and images that can convincingly manipulate reality. This technology harnesses deep learning algorithms, particularly 
+                      generative adversarial networks (GANs), to synthesize media that can impersonate individuals, alter speech, or fabricate events. 
+                      While these capabilities have fascinating applications in entertainment, film, and art, they also pose significant threats in the 
+                      realms of misinformation, fraud, and cybersecurity.<br>
+                      By employing various machine learning models, particularly convolutional neural networks (CNNs) and recurrent neural networks 
+                      (RNNs), we aim to analyze the subtle cues that differentiate genuine media from its altered counterparts. Our goal is not only 
+                      to enhance detection capabilities but also to contribute to broader efforts in safeguarding information integrity in the digital 
+                      landscape. Through this research, we aspire to provide tools that empower users to discern the authenticity of the media they 
+                      consume and share.
+                    </p>
+                </div>
+            </div>
+
+            <!-- About the Project Card -->
+            <div class="w3-card-4">
+                <header class="w3-blue">
+                    <h1>About The Project</h1>
+                </header>
+                <div class="content">
+                    <p>
+                      Detecting deepfakes presents unique challenges due to the rapid advancements in the techniques used to create them. 
+                      Many existing detection methods rely on detecting artifacts or inconsistencies that may not always be present in newer 
+                      deepfake technologies. Furthermore, as deepfake creators continuously improve their techniques, detection systems must 
+                      evolve in tandem to maintain efficacy.<br>
+                      Performance metrics such as accuracy, precision, recall, and F1-score are used to evaluate and compare the effectiveness 
+                      of the ML and DL approaches. The results aim to demonstrate the potential of these technologies to provide real-time 
+                      deepfake face detection, offering both beginners and experienced practitioners a valuable tool 
+                      for improving their technique and preventing securites.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture Diagram Section -->
+        <div class="diagram-section">
+            <h2>Architecture Diagram</h2>
+            <img src="static/images/Arch.png" alt="Architecture Diagram" class="diagram-img">
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+<!--{% extends "layout1.html" %}
+{% block content %}
+
+<img src="static/images/img1.png" alt="Car" style="width:100%">
+
+    <div class="w3-card-4 w3-margin">
+
+        <header class="w3-container w3-blue">
+          <h1>Introduction</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>The advent of deepfake technology has transformed the landscape of digital media, enabling the creation of hyper-realistic 
+            videos and images that can convincingly manipulate reality. This technology harnesses deep learning algorithms, particularly 
+            generative adversarial networks (GANs), to synthesize media that can impersonate individuals, alter speech, or fabricate events. 
+            While these capabilities have fascinating applications in entertainment, film, and art, they also pose significant threats in the 
+            realms of misinformation, fraud, and cybersecurity.<br>
+            By employing various machine learning models, particularly convolutional neural networks (CNNs) and recurrent neural networks 
+            (RNNs), we aim to analyze the subtle cues that differentiate genuine media from its altered counterparts. Our goal is not only 
+            to enhance detection capabilities but also to contribute to broader efforts in safeguarding information integrity in the digital 
+            landscape. Through this research, we aspire to provide tools that empower users to discern the authenticity of the media they 
+            consume and share.
+	        </p>
+        </div>
+        
+        <footer class="w3-container w3-blue">
+          <h5></h5>
+        </footer>
+        
+        </div>
+
+        <div class="w3-card-4 w3-margin">
+
+            <header class="w3-container w3-blue">
+              <h1>About The Project</h1>
+            </header>
+            
+            <div class="w3-container">
+              <p>
+                Detecting deepfakes presents unique challenges due to the rapid advancements in the techniques used to create them. 
+                Many existing detection methods rely on detecting artifacts or inconsistencies that may not always be present in newer 
+                deepfake technologies. Furthermore, as deepfake creators continuously improve their techniques, detection systems must 
+                evolve in tandem to maintain efficacy.<br>
+                Performance metrics such as accuracy, precision, recall, and F1-score are used to evaluate and compare the effectiveness 
+                of the ML and DL approaches. The results aim to demonstrate the potential of these technologies to provide real-time 
+                deepfake face detection, offering both beginners and experienced practitioners a valuable tool 
+                for improving their technique and preventing securites.
+              </p>
+            </div>
+            
+            <footer class="w3-container w3-blue">
+              <h5></h5>
+            </footer>
+            
+            </div>
+
+    <div class="w3-container w3-center">
+        <h2>Architecture Diagram</h2>
+        <img src="static/images/Arch.png" alt="car" style="width:100%">
+      </div>
+
+{% endblock %}-->
