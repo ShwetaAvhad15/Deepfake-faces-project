@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Upload Deepfake Image</h1>
+    </header>
+    <img src="static/images/test_image.jpg" alt="Alps" style="width:25%;height:25%">
+    <br>
+    <form class="w3-container w3-margin" action="" method="post" enctype="multipart/form-data">
+        <input class="w3-btn w3-blue-grey" type="file" name="photo" accept="image/*"/>
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Upload">
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Test">
+    </form>
+
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>
+
+    <div class="w3-card-4 w3-margin">
+
+      <header class="w3-container w3-blue">
+        <h1>Detected Deepfake Image Results</h1>
+      </header>
+      
+      <div class="w3-container">
+        <p>{{ fruit }}
+      </p>
+      </div>
+      
+      <footer class="w3-container w3-blue">
+        <h5></h5>
+      </footer>
+    </div>
+
+    <!--div class="w3-card-4 w3-margin">
+
+        <header class="w3-container w3-blue">
+          <h1>Imapct on Image</h1>
+        </header>
+        
+        <div class="w3-container">
+          <p>{{ result }}
+        </p>
+        </div-->
+        
+        <footer class="w3-container w3-blue">
+          <h5></h5>
+        </footer>
+    </div>
+
+    {% endblock %}
